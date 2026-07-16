@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rumours Lounge | Live Music &amp; Weekly Nights, Johannesburg</title>
+<meta name="description" content="Rumours Lounge is a live music venue in Johannesburg. Jam Night every Wednesday, Open Mic every Thursday, live bands every Friday and Saturday.">
+<meta property="og:title" content="Rumours Lounge | Johannesburg">
+<meta property="og:description" content="Jam Night, Open Mic, and live bands every week. The room Joburg keeps coming back to.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="logo">
+    <div class="logo-mark"></div>
+    <div class="logo-text">RUMOURS LOUNGE</div>
+  </div>
+  <div class="nav-links">
+    <a href="#week">This Week</a>
+    <a href="#room">The Room</a>
+    <a href="#find">Find Us</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-kicker">Johannesburg · Est. Secret Sauce</div>
+    <h1 class="display">The room stays.<br>What's <span class="hi">on</span> changes.</h1>
+    <p class="hero-sub">Jam sessions, open mic, karaoke specials, and live bands — Rumours Lounge is the stage Joburg keeps coming back to, whatever night you walk in.</p>
+    <a href="#week" class="hero-cta">See what's on this week ↓</a>
+  </div>
+</section>
+
+<!-- =========================================================
+     WEEKLY RHYTHM STRIP — this almost never changes, it's the
+     fixed weekly pattern. Only touch it if the schedule itself
+     changes (e.g. a night moves to a different day).
+     ========================================================= -->
+<div class="weekly">
+  <div class="weekly-row">
+    <div class="weekly-item">
+      <div class="weekly-day">Wed</div>
+      <div class="weekly-title">Jam Night</div>
+      <div class="weekly-sub">Bring your own gear</div>
+    </div>
+    <div class="weekly-item">
+      <div class="weekly-day">Thu</div>
+      <div class="weekly-title">Open Mic</div>
+      <div class="weekly-sub">All acts welcome</div>
+    </div>
+    <div class="weekly-item">
+      <div class="weekly-day">Fri &amp; Sat</div>
+      <div class="weekly-title">Live Bands</div>
+      <div class="weekly-sub">Doors 7pm</div>
+    </div>
+    <div class="weekly-item">
+      <div class="weekly-day">Always</div>
+      <div class="weekly-title">Full House Rig</div>
+      <div class="weekly-sub">No load-in needed</div>
+    </div>
+  </div>
+</div>
+
+<section id="room">
+  <div class="section-inner">
+    <div class="section-head">
+      <div>
+        <div class="section-kicker">The Space</div>
+        <div class="section-title display">This Is The Room</div>
+      </div>
+      <div class="section-note">No stock photos</div>
+    </div>
+    <div class="room-grid">
+      <div class="big"><img src="assets/DSC03729.jpg" alt="Full room view with stage"><div class="room-tag">Rock City</div></div>
+      <div class="small"><img src="assets/DSC03723.jpg" alt="Stage with truss lighting"><div class="room-tag">The Stage</div></div>
+      <div class="small"><img src="assets/DSC03725.jpg" alt="Drum kit under stage lights"><div class="room-tag">Kit's Always Up</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     THIS WEEK — UPDATE THIS EVERY MONDAY.
+     Each .week-row below is one night. To update:
+       1. Swap the date in .week-day (e.g. "Wed · Jul 22")
+       2. Swap the title in .week-title (band/event name)
+       3. Swap the description in .week-sub
+       4. If you have a poster, swap the <img src="..."> path
+          in .week-thumb (drop the new poster in /assets first).
+          If you don't have a poster yet, leave the
+          class="week-thumb empty" version as-is.
+     ========================================================= -->
+<section id="week">
+  <div class="section-inner">
+    <div class="section-head">
+      <div>
+        <div class="section-kicker">This Week</div>
+        <div class="section-title display">What's On</div>
+      </div>
+      <div class="section-note">Updated every Monday</div>
+    </div>
+
+    <div class="week-list">
+
+      <!-- WEDNESDAY -->
+      <div class="week-row">
+        <div class="week-thumb"><img src="assets/JamNight.jpg" alt="Jam Night poster"></div>
+        <div>
+          <div class="week-day">Wed · Jul 22</div>
+          <div class="week-title">Jam Night</div>
+          <div class="week-sub">Jam jar specials · all instruments welcome</div>
+        </div>
+        <a href="#" class="week-cta">Details →</a>
+      </div>
+
+      <!-- THURSDAY -->
+      <div class="week-row">
+        <div class="week-thumb"><img src="assets/OpenMic.jpg" alt="Open Mic Night poster"></div>
+        <div>
+          <div class="week-day">Thu · Jul 23</div>
+          <div class="week-title">Open Mic Night</div>
+          <div class="week-sub">All acts welcome</div>
+        </div>
+        <a href="#" class="week-cta">Details →</a>
+      </div>
+
+      <!-- FRIDAY -->
+      <div class="week-row">
+        <div class="week-thumb empty"><span>Poster soon</span></div>
+        <div>
+          <div class="week-day">Fri · Jul 24</div>
+          <div class="week-title">Band Name</div>
+          <div class="week-sub">Support: Second Act · doors 7pm</div>
+        </div>
+        <a href="#" class="week-cta">Details →</a>
+      </div>
+
+      <!-- SATURDAY -->
+      <div class="week-row">
+        <div class="week-thumb empty"><span>Poster soon</span></div>
+        <div>
+          <div class="week-day">Sat · Jul 25</div>
+          <div class="week-title">Band Name</div>
+          <div class="week-sub">Support: Second Act · doors 7pm</div>
+        </div>
+        <a href="#" class="week-cta">Details →</a>
+      </div>
+
+    </div>
+
+    <div style="margin-top:36px;">
+      <div class="hosting-note">
+        <p>Touring acts and local promoters bring shows through our doors too — if a poster says Rumours Lounge, this is the room it's happening in.</p>
+        <a href="https://sobelow.co.za" target="_blank" rel="noopener">See touring shows →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="find">
+  <div class="section-inner find-grid">
+    <div>
+      <div class="section-kicker">Find Us</div>
+      <h2 class="section-title display" style="margin-bottom:18px;">Come Hang Out</h2>
+      <p>No booking required for Jam Night or Open Mic — just walk in. Live band nights get busy, so come early if you want a spot near the front.</p>
+      <p>Johannesburg, South Africa.</p>
+    </div>
+    <div class="hours-list">
+      <div class="hours-row"><span>Wednesday</span><b>Jam Night · 7pm</b></div>
+      <div class="hours-row"><span>Thursday</span><b>Open Mic · 7pm</b></div>
+      <div class="hours-row"><span>Friday</span><b>Live Band · 7pm</b></div>
+      <div class="hours-row"><span>Saturday</span><b>Live Band · 7pm</b></div>
+      <div class="hours-row"><span>Bar</span><b>Open till late</b></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-title">Rumours Lounge</div>
+      <p class="footer-text">The room stays. What's on changes.<br>Johannesburg, South Africa.</p>
+    </div>
+    <div>
+      <div class="footer-title">This Week</div>
+      <p class="footer-text">Wed — Jam Night<br>Thu — Open Mic<br>Fri &amp; Sat — Live Bands</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-title">Follow</div>
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+  <div class="footer-bottom">Secret Sauce · Rumours Lounge · Est. Johannesburg</div>
+</footer>
+
+</body>
+</html>
