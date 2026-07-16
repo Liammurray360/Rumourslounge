@@ -28,7 +28,7 @@
 
 <section class="hero">
   <div class="hero-inner">
-    <div class="hero-kicker">Johannesburg · Est. Secret Sauce</div>
+    <div class="hero-kicker">Johannesburg</div>
     <h1 class="display">The room stays.<br>What's <span class="hi">on</span> changes.</h1>
     <p class="hero-sub">Jam sessions, karaoke specials, and live bands — Rumours Lounge is the stage Joburg keeps coming back to, whatever night you walk in.</p>
     <a href="#week" class="hero-cta">See what's on this week ↓</a>
@@ -80,14 +80,17 @@
 
 <!-- =========================================================
      THIS WEEK — UPDATE THIS EVERY MONDAY.
-     Each .week-row below is one night. To update:
+     Each .week-card below is one night. To update:
        1. Swap the date in .week-day (e.g. "Wed · Jul 22")
        2. Swap the title in .week-title (band/event name)
        3. Swap the description in .week-sub
-       4. If you have a poster, swap the <img src="..."> path
-          in .week-thumb (drop the new poster in /assets first).
-          If you don't have a poster yet, leave the
-          class="week-thumb empty" version as-is.
+       4. Swap the <img src="..."> path in .week-poster to the
+          new poster (drop the new poster in /assets first).
+          Posters display at full size, uncropped — any
+          orientation (portrait or landscape) works fine.
+          If you don't have a poster yet, replace the
+          <div class="week-poster">...</div> with:
+          <div class="week-poster empty"><span>Poster soon</span></div>
      ========================================================= -->
 <section id="week">
   <div class="section-inner">
@@ -99,39 +102,39 @@
       <div class="section-note">Updated every Monday</div>
     </div>
 
-    <div class="week-list">
+    <div class="week-grid">
 
       <!-- WEDNESDAY -->
-      <div class="week-row">
-        <div class="week-thumb"><img src="assets/JamNight.jpg" alt="Jam Night poster"></div>
-        <div>
-          <div class="week-day">Wed · Jul 22</div>
+      <div class="week-card">
+        <div class="week-poster"><img src="assets/JamNight.jpg" alt="Jam Night poster"></div>
+        <div class="week-info">
+          <div class="week-day">Wed · Jul 15</div>
           <div class="week-title">Jam Night</div>
           <div class="week-sub">Jam jar specials · all instruments welcome</div>
+          <a href="#" class="week-cta">Details →</a>
         </div>
-        <a href="#" class="week-cta">Details →</a>
       </div>
 
       <!-- FRIDAY -->
-      <div class="week-row">
-        <div class="week-thumb empty"><span>Poster soon</span></div>
-        <div>
-          <div class="week-day">Fri · Jul 24</div>
-          <div class="week-title">Band Name</div>
-          <div class="week-sub">Support: Second Act · doors 7pm</div>
+      <div class="week-card">
+        <div class="week-poster"><img src="assets/Untitled_17July.jpg" alt="Untitled event poster"></div>
+        <div class="week-info">
+          <div class="week-day">Fri · Jul 17 · 7pm</div>
+          <div class="week-title">Untitled</div>
+          <div class="week-sub">Sherman Oaks Retirement Home, Goatboi, Drunk Wizard, The Burnouts &amp; Glitter Clit — R100 door / R80 Quicket</div>
+          <a href="#" class="week-cta">Details →</a>
         </div>
-        <a href="#" class="week-cta">Details →</a>
       </div>
 
       <!-- SATURDAY -->
-      <div class="week-row">
-        <div class="week-thumb empty"><span>Poster soon</span></div>
-        <div>
-          <div class="week-day">Sat · Jul 25</div>
-          <div class="week-title">Band Name</div>
-          <div class="week-sub">Support: Second Act · doors 7pm</div>
+      <div class="week-card">
+        <div class="week-poster"><img src="assets/RetroReboot_18July.jpg" alt="Retro Reboot event poster"></div>
+        <div class="week-info">
+          <div class="week-day">Sat · Jul 18</div>
+          <div class="week-title">Retro Reboot</div>
+          <div class="week-sub">One night, three decades, endless hits — the ultimate throwback night</div>
+          <a href="#" class="week-cta">Details →</a>
         </div>
-        <a href="#" class="week-cta">Details →</a>
       </div>
 
     </div>
@@ -179,7 +182,7 @@
       <a href="#">Contact</a>
     </div>
   </div>
-  <div class="footer-bottom">Secret Sauce · Rumours Lounge · Est. Johannesburg</div>
+  <div class="footer-bottom">Rumours Lounge · Johannesburg</div>
 </footer>
 
 </body>
