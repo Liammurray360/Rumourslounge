@@ -120,15 +120,6 @@ section{ padding: 90px 40px; }
 .week-cta{ display:inline-block; margin-top:16px; font-size:0.78rem; font-weight:700; text-decoration:none; color:var(--white); border-bottom:1px solid var(--white); padding-bottom:2px; }
 .week-cta:hover{ color:var(--red); border-color:var(--red); }
 
-/* ===== ALSO HOSTING ===== */
-.hosting-note{
-  background:var(--panel); border:1px solid var(--border); border-radius:10px;
-  padding: 28px 32px; display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap;
-}
-.hosting-note p{ font-size:0.92rem; color:var(--fade); max-width:56ch; line-height:1.6; }
-.hosting-note a{ font-size:0.82rem; font-weight:700; text-decoration:none; color:var(--white); border-bottom:1px solid var(--white); padding-bottom:2px; white-space:nowrap; }
-.hosting-note a:hover{ color:var(--red); border-color:var(--red); }
-
 /* ===== FIND US ===== */
 .find-grid{ display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
 @media (max-width:860px){ .find-grid{ grid-template-columns:1fr; gap:32px; } }
