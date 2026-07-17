@@ -28,14 +28,38 @@
   /* ===== NAV ===== */
   nav{
     display:flex; align-items:center; justify-content:space-between;
-    padding: 24px 48px;
+    padding: 16px 48px;
+    background: var(--ink);
+    border-bottom: 4px solid var(--red);
+    position: sticky; top:0; z-index:100;
   }
   .brand{ display:flex; align-items:center; gap:10px; }
-  .brand img{ height:30px; display:block; }
-  .nav-links{ display:flex; gap:34px; font-size:0.82rem; font-weight:600; }
-  .nav-links a{ text-decoration:none; }
-  .nav-links a:hover{ color: var(--red); }
+  .brand img{ height:34px; display:block; }
+  .nav-links{ display:flex; gap:32px; font-size:0.75rem; font-weight:700; }
+  .nav-links a{
+    text-decoration:none; color: rgba(245,240,226,0.75);
+    text-transform:uppercase; letter-spacing:1px;
+    position:relative; padding-bottom:5px; transition: color .15s;
+  }
+  .nav-links a::after{
+    content:''; position:absolute; left:0; bottom:0; width:0; height:2px;
+    background: var(--red); transition: width .2s;
+  }
+  .nav-links a:hover{ color: var(--cream); }
+  .nav-links a:hover::after{ width:100%; }
   @media (max-width:780px){ .nav-links{ display:none; } }
+  .nav-right{ display:flex; align-items:center; gap:24px; }
+  .nav-whatsapp{
+    background:var(--red); color:var(--white); text-decoration:none;
+    font-size:0.75rem; font-weight:700; letter-spacing:0.5px; padding:9px 18px; border-radius:999px; white-space:nowrap;
+    transition: background .15s;
+    animation: navPulse 2.6s infinite;
+  }
+  .nav-whatsapp:hover{ background:var(--white); color:var(--ink); animation:none; }
+  @keyframes navPulse{
+    0%,100%{ box-shadow: 0 0 0 0 rgba(236,28,29,0.55); }
+    50%{ box-shadow: 0 0 0 7px rgba(236,28,29,0); }
+  }
 
   /* ===== HERO ===== */
   .hero{ padding: 0; overflow:hidden; }
@@ -175,11 +199,15 @@
 <body>
 
 <nav>
-  <div class="brand"><img src="assets/RumoursLogoRedClean.png" alt="Rumours Lounge"></div>
-  <div class="nav-links">
-    <a href="whats-on.html">This Week</a>
-    <a href="venue.html">The Venue</a>
-    <a href="#find">Find Us</a>
+  <div class="brand"><img src="assets/RumoursLogoCream.png" alt="Rumours Lounge"></div>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a href="whats-on.html">This Week</a>
+      <a href="venue.html">The Venue</a>
+      <a href="contact.html">Contact</a>
+      <a href="#find">Find Us</a>
+    </div>
+    <a href="https://wa.me/27616723985" class="nav-whatsapp">WhatsApp Us</a>
   </div>
 </nav>
 
@@ -249,30 +277,11 @@
   </div>
 </section>
 
-<section id="contact" style="padding-top:0;">
+<section class="teaser" style="padding-top:0;">
   <div class="section-inner">
-    <div class="contact-grid">
-      <a href="tel:+27000000000" class="contact-card">
-        <div class="contact-label">Give Us A Call</div>
-        <div class="contact-value">+27 00 000 0000</div>
-      </a>
-      <a href="https://wa.me/27000000000" class="contact-card">
-        <div class="contact-label">WhatsApp Us</div>
-        <div class="contact-value">+27 00 000 0000</div>
-      </a>
-      <a href="mailto:bookings@rumourslounge.co.za" class="contact-card">
-        <div class="contact-label">Email Us</div>
-        <div class="contact-value">bookings@rumourslounge.co.za</div>
-      </a>
-    </div>
-
-    <div class="submit-band">
-      <div>
-        <div class="submit-title disp">Got A Show?</div>
-        <p class="submit-sub">If you think it belongs at Rumours, hit us up.</p>
-      </div>
-      <a href="mailto:bookings@rumourslounge.co.za?subject=Event%20Submission" class="hero-cta">Submit Your Event →</a>
-    </div>
+    <div class="teaser-kicker">Get In Touch</div>
+    <div class="teaser-line">Got a show, a question, or just want to say hi?</div>
+    <a href="contact.html" class="hero-cta">Contact Us →</a>
   </div>
 </section>
 
