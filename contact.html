@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Rumours Lounge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream: #F5F0E2;
+    --white: #FFFFFF;
+    --ink: #17130F;
+    --red: #EC1C1D;
+    --muted: #6B6455;
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+  body{
+    background-color: var(--cream);
+    color: var(--ink); font-family:'Inter', sans-serif; overflow-x:hidden;
+  }
+  a{ color:inherit; }
+  .disp{ font-family:'Anton', sans-serif; text-transform:uppercase; }
+
+  /* ===== NAV ===== */
+  nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding: 16px 48px;
+    background: var(--ink);
+    border-bottom: 4px solid var(--red);
+    position: sticky; top:0; z-index:100;
+  }
+  .brand{ display:flex; align-items:center; gap:10px; }
+  .brand img{ height:34px; display:block; }
+  .nav-links{ display:flex; gap:32px; font-size:0.75rem; font-weight:700; }
+  .nav-links a{
+    text-decoration:none; color: rgba(245,240,226,0.75);
+    text-transform:uppercase; letter-spacing:1px;
+    position:relative; padding-bottom:5px; transition: color .15s;
+  }
+  .nav-links a::after{
+    content:''; position:absolute; left:0; bottom:0; width:0; height:2px;
+    background: var(--red); transition: width .2s;
+  }
+  .nav-links a:hover{ color: var(--cream); }
+  .nav-links a:hover::after{ width:100%; }
+  @media (max-width:780px){ .nav-links{ display:none; } }
+  .nav-right{ display:flex; align-items:center; gap:24px; }
+  .nav-whatsapp{
+    background:var(--red); color:var(--white); text-decoration:none;
+    font-size:0.75rem; font-weight:700; letter-spacing:0.5px; padding:9px 18px; border-radius:999px; white-space:nowrap;
+    transition: background .15s;
+    animation: navPulse 2.6s infinite;
+  }
+  .nav-whatsapp:hover{ background:var(--white); color:var(--ink); animation:none; }
+  @keyframes navPulse{
+    0%,100%{ box-shadow: 0 0 0 0 rgba(236,28,29,0.55); }
+    50%{ box-shadow: 0 0 0 7px rgba(236,28,29,0); }
+  }
+
+  /* ===== PAGE INTRO ===== */
+  .page-intro{ padding: 70px 48px 20px; }
+  .page-kicker{ font-size:0.78rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--red); margin-bottom:14px; }
+  .page-title{ font-size: clamp(2.6rem, 7vw, 5rem); line-height:0.95; margin-bottom:22px; }
+  .page-desc{ font-size:1.05rem; line-height:1.75; color:var(--muted); max-width:56ch; }
+
+  /* ===== SECTION SHELL ===== */
+  section{ padding: 40px 48px 90px; }
+  .section-inner{ max-width:1280px; margin:0 auto; }
+
+  /* ===== CONTACT ===== */
+  .contact-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:2px; margin-bottom:50px; background:var(--ink); }
+  @media (max-width:800px){ .contact-grid{ grid-template-columns:1fr; } }
+  .contact-card{ display:block; text-decoration:none; color:var(--ink); background:var(--cream); padding:32px 28px; transition: background .15s, color .15s; }
+  .contact-card:hover{ background:var(--red); color:var(--white); }
+  .contact-label{ font-size:0.72rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; margin-bottom:10px; opacity:0.7; }
+  .contact-value{ font-size:1.3rem; font-weight:700; }
+
+  .submit-band{
+    background: var(--ink); color:var(--cream);
+    padding:44px 40px; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;
+  }
+  .submit-title{ font-family:'Anton', sans-serif; text-transform:uppercase; font-size: clamp(1.6rem,3vw,2.2rem); }
+  .submit-sub{ font-size:0.92rem; color:rgba(245,240,226,0.6); max-width:44ch; margin-top:8px; }
+  .submit-cta{
+    display:inline-flex; align-items:center; gap:10px; flex-shrink:0;
+    background:var(--red); color:var(--white); text-decoration:none; font-weight:700; font-size:0.85rem;
+    padding:16px 30px; transition: background .15s;
+  }
+  .submit-cta:hover{ background:var(--cream); color:var(--ink); }
+
+  /* ===== FOOTER ===== */
+  footer{ border-top:6px solid var(--ink); padding:60px 48px 30px; background:var(--red); color:var(--white); }
+  .footer-grid{ display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:40px; max-width:1280px; margin:0 auto; }
+  @media (max-width:700px){ .footer-grid{ grid-template-columns:1fr; gap:26px; text-align:center; } }
+  .footer-title{ font-weight:700; margin-bottom:12px; font-size:0.95rem; color:var(--white); }
+  .footer-text{ font-size:0.85rem; line-height:1.7; color:rgba(255,255,255,0.75); }
+  .footer-links a{ display:block; font-size:0.85rem; text-decoration:none; color:rgba(255,255,255,0.75); margin-bottom:8px; }
+  .footer-links a:hover{ color:var(--ink); }
+  .footer-bottom{ max-width:1280px; margin:44px auto 0; padding-top:20px; border-top:2px solid rgba(255,255,255,0.3); font-size:0.72rem; letter-spacing:1px; text-transform:uppercase; color:rgba(255,255,255,0.7); text-align:center; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="brand"><img src="assets/RumoursLogoCream.png" alt="Rumours Lounge"></div>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a href="whats-on.html">This Week</a>
+      <a href="venue.html">The Venue</a>
+      <a href="contact.html">Contact</a>
+      <a href="index.html#find">Find Us</a>
+    </div>
+    <a href="https://wa.me/27616723985" class="nav-whatsapp">WhatsApp Us</a>
+  </div>
+</nav>
+
+<div class="page-intro">
+  <div class="page-kicker">Johannesburg</div>
+  <div class="page-title disp">Contact</div>
+  <p class="page-desc">Questions, bookings, or you've got a show that belongs on our stage — here's every way to reach us.</p>
+</div>
+
+<section>
+  <div class="section-inner">
+    <div class="contact-grid">
+      <a href="tel:+27616723985" class="contact-card">
+        <div class="contact-label">Give Us A Call</div>
+        <div class="contact-value">061 672 3985</div>
+      </a>
+      <a href="https://wa.me/27616723985" class="contact-card">
+        <div class="contact-label">WhatsApp Us</div>
+        <div class="contact-value">061 672 3985</div>
+      </a>
+      <a href="mailto:rumoursloungeza@gmail.com" class="contact-card">
+        <div class="contact-label">Email Us</div>
+        <div class="contact-value">rumoursloungeza@gmail.com</div>
+      </a>
+    </div>
+
+    <div class="submit-band">
+      <div>
+        <div class="submit-title">Got A Show?</div>
+        <p class="submit-sub">Touring act, DJ night, or something else entirely — if you think it belongs at Rumours, hit us up.</p>
+      </div>
+      <a href="mailto:rumoursloungeza@gmail.com?subject=Event%20Submission" class="submit-cta">Submit Your Event →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-title">Rumours Lounge</div>
+      <p class="footer-text">The room stays. What's on changes.<br>Johannesburg, South Africa.</p>
+    </div>
+    <div>
+      <div class="footer-title">Hours</div>
+      <p class="footer-text">Wed — Jam Night, 7pm<br>Fri &amp; Sat — Live Bands, 7pm</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-title">Follow</div>
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+  <div class="footer-bottom">Rumours Lounge · Johannesburg</div>
+</footer>
+
+</body>
+</html>
