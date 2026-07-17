@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Venue — Rumours Lounge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream: #F5F0E2;
+    --white: #FFFFFF;
+    --ink: #17130F;
+    --red: #EC1C1D;
+    --muted: #6B6455;
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+  body{
+    background-color: var(--cream);
+    color: var(--ink); font-family:'Inter', sans-serif; overflow-x:hidden;
+  }
+  a{ color:inherit; }
+  .disp{ font-family:'Anton', sans-serif; text-transform:uppercase; }
+  .on-red{ background: var(--red); color: var(--white); }
+
+  /* ===== NAV ===== */
+  nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding: 24px 48px;
+  }
+  .brand{ display:flex; align-items:center; gap:10px; }
+  .brand img{ height:30px; display:block; }
+  .nav-links{ display:flex; gap:34px; font-size:0.82rem; font-weight:600; }
+  .nav-links a{ text-decoration:none; }
+  .nav-links a:hover{ color: var(--red); }
+  @media (max-width:780px){ .nav-links{ display:none; } }
+
+  /* ===== PAGE INTRO ===== */
+  .page-intro{ padding: 70px 48px 20px; }
+  .page-kicker{ font-size:0.78rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--red); margin-bottom:14px; }
+  .page-title{ font-size: clamp(2.6rem, 7vw, 5rem); line-height:0.95; margin-bottom:26px; }
+  .page-desc{ font-size:1.05rem; line-height:1.8; color:var(--muted); max-width:64ch; }
+
+  /* ===== SECTION SHELL ===== */
+  section{ padding: 70px 48px; }
+  .section-inner{ max-width:1280px; margin:0 auto; }
+  .section-head{ margin-bottom:50px; display:flex; align-items:baseline; gap:24px; flex-wrap:wrap; }
+  .section-title{ font-size: clamp(2.4rem, 6vw, 4.5rem); line-height:0.95; text-shadow: -2px 0 0 rgba(236,28,29,0.18); }
+  .on-red .section-title{ color: var(--white); text-shadow: -2px 0 0 rgba(23,19,15,0.28); }
+
+  /* ===== OUR VIBE ===== */
+  .vibe-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:4px; }
+  @media (max-width:860px){ .vibe-grid{ grid-template-columns:repeat(2,1fr); } }
+  .vibe-photo{ aspect-ratio:4/5; overflow:hidden; background:var(--white); border:3px solid var(--white); }
+  .vibe-photo img{ width:100%; height:100%; object-fit:cover; display:block; filter:grayscale(0.3) contrast(1.1); transition: filter .3s, transform .4s; }
+  .vibe-photo:hover img{ filter:grayscale(0) contrast(1.05); transform:scale(1.04); }
+
+  /* ===== THE DETAILS ===== */
+  .details-grid{ display:grid; grid-template-columns:repeat(5,1fr); gap:16px; }
+  @media (max-width:900px){ .details-grid{ grid-template-columns:repeat(2,1fr); } }
+  .detail-photo{ aspect-ratio:1/1; border-radius:8px; overflow:hidden; }
+  .detail-photo img{ width:100%; height:100%; object-fit:cover; display:block; transition: transform .4s; }
+  .detail-card:hover .detail-photo img{ transform:scale(1.06); }
+  .detail-cap{ margin-top:10px; font-size:0.85rem; font-weight:700; text-align:center; }
+
+  /* ===== FOOTER ===== */
+  footer{ border-top:6px solid var(--ink); padding:60px 48px 30px; background:var(--red); color:var(--white); }
+  .footer-grid{ display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:40px; max-width:1280px; margin:0 auto; }
+  @media (max-width:700px){ .footer-grid{ grid-template-columns:1fr; gap:26px; text-align:center; } }
+  .footer-title{ font-weight:700; margin-bottom:12px; font-size:0.95rem; color:var(--white); }
+  .footer-text{ font-size:0.85rem; line-height:1.7; color:rgba(255,255,255,0.75); }
+  .footer-links a{ display:block; font-size:0.85rem; text-decoration:none; color:rgba(255,255,255,0.75); margin-bottom:8px; }
+  .footer-links a:hover{ color:var(--ink); }
+  .footer-bottom{ max-width:1280px; margin:44px auto 0; padding-top:20px; border-top:2px solid rgba(255,255,255,0.3); font-size:0.72rem; letter-spacing:1px; text-transform:uppercase; color:rgba(255,255,255,0.7); text-align:center; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="brand"><img src="assets/RumoursLogoRedClean.png" alt="Rumours Lounge"></div>
+  <div class="nav-links">
+    <a href="whats-on.html">This Week</a>
+    <a href="venue.html">The Venue</a>
+    <a href="index.html#find">Find Us</a>
+  </div>
+</nav>
+
+<div class="page-intro">
+  <div class="page-kicker">Johannesburg</div>
+  <div class="page-title disp">The Venue</div>
+  <p class="page-desc">[Placeholder — a cute little description goes here: what the room feels like walking in, the rig, the regulars, whatever makes it Rumours. A couple of warm, honest sentences beats a brochure paragraph.]</p>
+</div>
+
+<section id="room">
+  <div class="section-inner">
+    <div class="section-head">
+      <div class="section-title disp">Our Vibe</div>
+    </div>
+    <div class="vibe-grid">
+      <div class="vibe-photo"><img src="assets/DSC03725.jpg" alt="Drum kit under stage lights"></div>
+      <div class="vibe-photo"><img src="assets/DSC03732.jpg" alt="Microphone in stage lighting"></div>
+      <div class="vibe-photo"><img src="assets/DSC03731.jpg" alt="Drum kit close up"></div>
+      <div class="vibe-photo"><img src="assets/DSC03730.jpg" alt="Full room view with Rock City sign"></div>
+    </div>
+  </div>
+</section>
+
+<section id="details">
+  <div class="section-inner">
+    <div class="section-head">
+      <div class="section-title disp">The Details</div>
+    </div>
+    <div class="details-grid">
+      <div class="detail-card">
+        <div class="detail-photo"><img src="assets/DSC03706.jpg" alt="Bra Joe's Corner sign above the bar"></div>
+        <div class="detail-cap">Bra Joe's Corner</div>
+      </div>
+      <div class="detail-card">
+        <div class="detail-photo"><img src="assets/DSC03700.jpg" alt="Wall of signed vinyl records"></div>
+        <div class="detail-cap">The Wall Of Vinyl</div>
+      </div>
+      <div class="detail-card">
+        <div class="detail-photo"><img src="assets/DSC03701.jpg" alt="Painting of Bruce Springsteen, The Boss"></div>
+        <div class="detail-cap">The Boss</div>
+      </div>
+      <div class="detail-card">
+        <div class="detail-photo"><img src="assets/DSC03699.jpg" alt="Bar shelf with Red Bull sign"></div>
+        <div class="detail-cap">The Bar</div>
+      </div>
+      <div class="detail-card">
+        <div class="detail-photo"><img src="assets/DSC03692.jpg" alt="Rumours Rock City neon sign"></div>
+        <div class="detail-cap">Rock City</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-title">Rumours Lounge</div>
+      <p class="footer-text">The room stays. What's on changes.<br>Johannesburg, South Africa.</p>
+    </div>
+    <div>
+      <div class="footer-title">Hours</div>
+      <p class="footer-text">Wed — Jam Night, 7pm<br>Fri &amp; Sat — Live Bands, 7pm</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-title">Follow</div>
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+  <div class="footer-bottom">Rumours Lounge · Johannesburg</div>
+</footer>
+
+</body>
+</html>
