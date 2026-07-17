@@ -43,14 +43,16 @@
   /* ===== HERO — massive cropped type is the whole point ===== */
   .hero{ padding: 0; overflow:hidden; }
   .hero-photo{
-    height: 52vh; min-height:380px; position:relative;
+    aspect-ratio: 16/9;
+    max-height: 78vh;
+    position:relative;
     display:flex; align-items:center; justify-content:center;
     overflow:hidden;
     background: var(--ink);
   }
   .hero-video{
     position:absolute; inset:0; width:100%; height:100%;
-    object-fit:cover; object-position:center 55%;
+    object-fit:cover;
   }
   .hero-photo::after{
     content:""; position:absolute; inset:0;
@@ -195,7 +197,7 @@
 
 <section class="hero">
   <div class="hero-photo">
-    <video class="hero-video" autoplay muted loop playsinline poster="assets/DSC03724.jpg">
+    <video class="hero-video" autoplay muted loop playsinline>
       <source src="assets/hero-reel.mp4" type="video/mp4">
     </video>
     <img src="assets/RumoursLogoCream.png" alt="Rumours Lounge">
