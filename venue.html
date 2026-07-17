@@ -34,10 +34,10 @@
   }
   .brand{ display:flex; align-items:center; gap:10px; }
   .brand img{ height:34px; display:block; }
-  .nav-links{ display:flex; gap:32px; font-size:0.75rem; font-weight:700; }
+  .nav-links{ display:flex; gap:32px; font-size:0.85rem; }
   .nav-links a{
+    font-family:'Anton', sans-serif; text-transform:uppercase; letter-spacing:0.5px;
     text-decoration:none; color: rgba(245,240,226,0.75);
-    text-transform:uppercase; letter-spacing:1px;
     position:relative; padding-bottom:5px; transition: color .15s;
   }
   .nav-links a::after{
@@ -98,7 +98,7 @@
 
   /* ===== FOOTER ===== */
   footer{ border-top:6px solid var(--ink); border-bottom:6px solid var(--ink); padding:60px 48px 40px; background:var(--red); color:var(--white); }
-  .footer-grid{ display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:40px; max-width:1280px; margin:0 auto; text-align:center; }
+  .footer-grid{ display:grid; grid-template-columns:1fr 1.2fr 1fr; gap:40px; max-width:1280px; margin:0 auto; text-align:center; }
   @media (max-width:700px){ .footer-grid{ grid-template-columns:1fr; gap:26px; text-align:center; } }
   .footer-title{ font-weight:700; margin-bottom:12px; font-size:0.95rem; color:var(--white); }
   .footer-text{ font-size:0.85rem; line-height:1.7; color:rgba(255,255,255,0.75); }
@@ -170,14 +170,14 @@
 
 <footer>
   <div class="footer-grid">
-    <div>
-      <div class="footer-title">Rumours Lounge</div>
-      <p class="footer-text">The room stays. What's on changes.</p>
-    </div>
     <div class="footer-links">
       <div class="footer-title">Follow</div>
       <a href="https://www.instagram.com/rumoursloungejhb/" target="_blank" rel="noopener">Instagram</a>
       <a href="https://www.facebook.com/Rumours.Lounge.Bar/" target="_blank" rel="noopener">Facebook</a>
+    </div>
+    <div>
+      <div class="footer-title">Rumours Lounge</div>
+      <p class="footer-text">The room stays. What's on changes.</p>
     </div>
     <div class="footer-links">
       <div class="footer-title">Contact</div>
