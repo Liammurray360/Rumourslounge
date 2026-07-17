@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What's On — Rumours Lounge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream: #F5F0E2;
+    --white: #FFFFFF;
+    --ink: #17130F;
+    --red: #EC1C1D;
+    --muted: #6B6455;
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+  body{
+    background-color: var(--cream);
+    color: var(--ink); font-family:'Inter', sans-serif; overflow-x:hidden;
+  }
+  a{ color:inherit; }
+  .disp{ font-family:'Anton', sans-serif; text-transform:uppercase; }
+
+  /* ===== NAV ===== */
+  nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding: 24px 48px;
+  }
+  .brand{ display:flex; align-items:center; gap:10px; }
+  .brand img{ height:30px; display:block; }
+  .nav-links{ display:flex; gap:34px; font-size:0.82rem; font-weight:600; }
+  .nav-links a{ text-decoration:none; }
+  .nav-links a:hover{ color: var(--red); }
+  @media (max-width:780px){ .nav-links{ display:none; } }
+
+  /* ===== PAGE INTRO ===== */
+  .page-intro{ padding: 70px 48px 20px; }
+  .page-kicker{ font-size:0.78rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--red); margin-bottom:14px; }
+  .page-title{ font-size: clamp(2.6rem, 7vw, 5rem); line-height:0.95; }
+
+  /* ===== SECTION SHELL ===== */
+  section{ padding: 40px 48px 90px; }
+  .section-inner{ max-width:1280px; margin:0 auto; }
+  .section-head{ margin-bottom:40px; }
+  .section-kicker{ font-size:0.78rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--red); margin-bottom:10px; }
+  .section-title{ font-size: clamp(2rem, 5vw, 3.2rem); line-height:0.95; }
+
+  /* ===== THIS WEEK — huge stacked list ===== */
+  .flyer-list{ display:flex; flex-direction:column; }
+  .flyer-row{
+    display:grid; grid-template-columns: 1fr 340px; gap:40px; align-items:center;
+    padding: 44px 0; border-top:3px solid var(--ink);
+  }
+  .flyer-list .flyer-row:last-child{ border-bottom:3px solid var(--ink); }
+  @media (max-width:860px){ .flyer-row{ grid-template-columns:1fr; gap:24px; } }
+  .flyer-day{ font-size:0.8rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--red); }
+  .flyer-title{ font-size: clamp(2rem,4vw,3.2rem); line-height:1; margin-top:8px; text-shadow: -2px 0 0 rgba(236,28,29,0.18); }
+  .flyer-sub{ font-size:0.95rem; color:var(--muted); margin-top:14px; max-width:52ch; line-height:1.6; }
+  .flyer-img{ width:100%; border-radius:4px; display:block; }
+
+  /* ===== COMING UP — simpler list, no posters ===== */
+  .coming-list{ display:flex; flex-direction:column; }
+  .coming-row{
+    display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:8px 20px;
+    padding: 26px 0; border-top:2px solid rgba(23,19,15,0.15);
+  }
+  .coming-list .coming-row:last-child{ border-bottom:2px solid rgba(23,19,15,0.15); }
+  .coming-date{ font-size:0.78rem; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--red); white-space:nowrap; }
+  .coming-title{ font-size:1.3rem; font-weight:700; flex:1; min-width:200px; }
+  .coming-note{ font-size:0.88rem; color:var(--muted); }
+
+  /* ===== FOOTER ===== */
+  footer{ border-top:6px solid var(--ink); padding:60px 48px 30px; background:var(--red); color:var(--white); }
+  .footer-grid{ display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:40px; max-width:1280px; margin:0 auto; }
+  @media (max-width:700px){ .footer-grid{ grid-template-columns:1fr; gap:26px; text-align:center; } }
+  .footer-title{ font-weight:700; margin-bottom:12px; font-size:0.95rem; color:var(--white); }
+  .footer-text{ font-size:0.85rem; line-height:1.7; color:rgba(255,255,255,0.75); }
+  .footer-links a{ display:block; font-size:0.85rem; text-decoration:none; color:rgba(255,255,255,0.75); margin-bottom:8px; }
+  .footer-links a:hover{ color:var(--ink); }
+  .footer-bottom{ max-width:1280px; margin:44px auto 0; padding-top:20px; border-top:2px solid rgba(255,255,255,0.3); font-size:0.72rem; letter-spacing:1px; text-transform:uppercase; color:rgba(255,255,255,0.7); text-align:center; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="brand"><img src="assets/RumoursLogoRedClean.png" alt="Rumours Lounge"></div>
+  <div class="nav-links">
+    <a href="whats-on.html">This Week</a>
+    <a href="venue.html">The Venue</a>
+    <a href="index.html#find">Find Us</a>
+  </div>
+</nav>
+
+<div class="page-intro">
+  <div class="page-kicker">Johannesburg</div>
+  <div class="page-title disp">What's On</div>
+</div>
+
+<section id="week">
+  <div class="section-inner">
+    <div class="section-head">
+      <div class="section-kicker">This Week</div>
+      <div class="section-title disp">Updated Every Monday</div>
+    </div>
+    <div class="flyer-list">
+      <div class="flyer-row">
+        <div>
+          <div class="flyer-day">Wed · Jul 15</div>
+          <div class="flyer-title disp">Jam Night</div>
+          <div class="flyer-sub">Jam jar specials · all instruments welcome</div>
+        </div>
+        <img class="flyer-img" src="assets/JamNight.jpg" alt="Jam Night poster">
+      </div>
+      <div class="flyer-row">
+        <div>
+          <div class="flyer-day">Fri · Jul 17 · 7pm</div>
+          <div class="flyer-title disp">Untitled</div>
+          <div class="flyer-sub">Sherman Oaks Retirement Home, Goatboi, Drunk Wizard, The Burnouts &amp; Glitter Clit — R100 door / R80 Quicket</div>
+        </div>
+        <img class="flyer-img" src="assets/Untitled_17July.jpg" alt="Untitled event poster">
+      </div>
+      <div class="flyer-row">
+        <div>
+          <div class="flyer-day">Sat · Jul 18 · 12pm</div>
+          <div class="flyer-title disp">Retro Reboot</div>
+          <div class="flyer-sub">One night, three decades, endless hits — the ultimate throwback night</div>
+        </div>
+        <img class="flyer-img" src="assets/RetroReboot_18July.jpg" alt="Retro Reboot poster">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="coming-up" style="padding-top:0;">
+  <div class="section-inner">
+    <div class="section-head">
+      <div class="section-kicker">Coming Up</div>
+      <div class="section-title disp">Later This Month &amp; Beyond</div>
+    </div>
+    <div class="coming-list">
+      <div class="coming-row">
+        <div class="coming-date">Fri · Jul 25</div>
+        <div class="coming-title">DJ Battle: Round 1 Reloaded</div>
+        <div class="coming-note">The Doors Nightclub · R50 entrance</div>
+      </div>
+      <div class="coming-row">
+        <div class="coming-date">Thu · Jul 30</div>
+        <div class="coming-title">Alternative Karaoke</div>
+        <div class="coming-note">Free entrance · last Thursday of every month</div>
+      </div>
+      <div class="coming-row">
+        <div class="coming-date">Sat · Aug 29</div>
+        <div class="coming-title">State Of The Nation VI</div>
+        <div class="coming-note">14 metal bands · 2 stages</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-title">Rumours Lounge</div>
+      <p class="footer-text">The room stays. What's on changes.<br>Johannesburg, South Africa.</p>
+    </div>
+    <div>
+      <div class="footer-title">Hours</div>
+      <p class="footer-text">Wed — Jam Night, 7pm<br>Fri &amp; Sat — Live Bands, 7pm</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-title">Follow</div>
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+  <div class="footer-bottom">Rumours Lounge · Johannesburg</div>
+</footer>
+
+</body>
+</html>
