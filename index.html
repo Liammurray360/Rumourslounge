@@ -43,7 +43,7 @@
   /* ===== HERO — massive cropped type is the whole point ===== */
   .hero{ padding: 0; overflow:hidden; }
   .hero-photo{
-    height: 46vh; min-height:320px; position:relative;
+    height: 52vh; min-height:380px; position:relative;
     background-image: url('assets/DSC03723.jpg');
     background-size: cover; background-position: center 55%;
     display:flex; align-items:center; justify-content:center;
@@ -52,7 +52,7 @@
     content:""; position:absolute; inset:0;
     background: linear-gradient(180deg, rgba(23,19,15,0) 60%, rgba(23,19,15,0.55) 100%);
   }
-  .hero-photo img{ position:relative; z-index:1; height:90px; filter: drop-shadow(0 6px 20px rgba(0,0,0,0.5)); }
+  .hero-photo img{ position:relative; z-index:1; height: clamp(220px, 26vw, 340px); filter: drop-shadow(0 10px 30px rgba(0,0,0,0.55)); }
   .hero-type-wrap{ padding-top: 40px; }
   .hero-type{
     font-size: clamp(5rem, 15vw, 13rem);
