@@ -115,6 +115,14 @@
   .vibe-photo img{ width:100%; height:100%; object-fit:cover; display:block; filter:grayscale(0.3) contrast(1.1); transition: filter .3s, transform .4s; }
   .vibe-photo:hover img{ filter:grayscale(0) contrast(1.05); transform:scale(1.04); }
 
+  /* ===== THE DETAILS ===== */
+  .details-grid{ display:grid; grid-template-columns:repeat(5,1fr); gap:16px; }
+  @media (max-width:900px){ .details-grid{ grid-template-columns:repeat(2,1fr); } }
+  .detail-photo{ aspect-ratio:1/1; border-radius:8px; overflow:hidden; }
+  .detail-photo img{ width:100%; height:100%; object-fit:cover; display:block; transition: transform .4s; }
+  .detail-card:hover .detail-photo img{ transform:scale(1.06); }
+  .detail-cap{ margin-top:10px; font-size:0.85rem; font-weight:700; text-align:center; }
+
   /* ===== THIS WEEK — huge stacked list, not cards ===== */
   .flyer-list{ display:flex; flex-direction:column; }
   .flyer-row{
@@ -237,10 +245,41 @@
   </div>
 </section>
 
-<section id="week">
+<section id="details">
   <div class="section-inner">
     <div class="section-head">
       <div class="section-num">02</div>
+      <div class="section-title disp">The Details</div>
+    </div>
+    <div class="details-grid">
+      <div class="detail-card">
+        <div class="detail-photo"><img src="assets/DSC03706.jpg" alt="Bra Joe's Corner sign above the bar"></div>
+        <div class="detail-cap">Bra Joe's Corner</div>
+      </div>
+      <div class="detail-card">
+        <div class="detail-photo"><img src="assets/DSC03700.jpg" alt="Wall of signed vinyl records"></div>
+        <div class="detail-cap">The Wall Of Vinyl</div>
+      </div>
+      <div class="detail-card">
+        <div class="detail-photo"><img src="assets/DSC03701.jpg" alt="Painting of Bruce Springsteen, The Boss"></div>
+        <div class="detail-cap">The Boss</div>
+      </div>
+      <div class="detail-card">
+        <div class="detail-photo"><img src="assets/DSC03699.jpg" alt="Bar shelf with Red Bull sign"></div>
+        <div class="detail-cap">The Bar</div>
+      </div>
+      <div class="detail-card">
+        <div class="detail-photo"><img src="assets/DSC03692.jpg" alt="Rumours Rock City neon sign"></div>
+        <div class="detail-cap">Rock City</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="week">
+  <div class="section-inner">
+    <div class="section-head">
+      <div class="section-num">03</div>
       <div class="section-title disp">What's On</div>
     </div>
     <div class="flyer-list">
@@ -275,7 +314,7 @@
 <section id="find" class="on-red">
   <div class="section-inner find-grid">
     <div>
-      <div class="section-num">03</div>
+      <div class="section-num">04</div>
       <div class="section-title disp" style="margin-bottom:20px;">Come Hang Out</div>
       <p>No booking required for Jam Night — just walk in. Live band nights get busy, so come early if you want a spot near the front.</p>
       <p>Johannesburg, South Africa.</p>
