@@ -85,6 +85,8 @@
   .vibe-photo{ aspect-ratio:4/5; overflow:hidden; background:var(--white); border:3px solid var(--white); }
   .vibe-photo img{ width:100%; height:100%; object-fit:cover; display:block; filter:grayscale(0.3) contrast(1.1); transition: filter .3s, transform .4s; }
   .vibe-photo:hover img{ filter:grayscale(0) contrast(1.05); transform:scale(1.04); }
+  .stage-photo{ border-radius:10px; overflow:hidden; }
+  .stage-photo img{ width:100%; display:block; }
 
   /* ===== THE DETAILS ===== */
   .details-grid{ display:grid; grid-template-columns:repeat(5,1fr); gap:16px; }
@@ -130,11 +132,8 @@
     <div class="section-head">
       <div class="section-title disp">The Stage</div>
     </div>
-    <div class="vibe-grid">
-      <div class="vibe-photo"><img src="assets/DSC03725.jpg" alt="Drum kit under stage lights"></div>
-      <div class="vibe-photo"><img src="assets/DSC03732.jpg" alt="Microphone in stage lighting"></div>
-      <div class="vibe-photo"><img src="assets/DSC03731.jpg" alt="Drum kit close up"></div>
-      <div class="vibe-photo"><img src="assets/DSC03730.jpg" alt="Full room view with Rock City sign"></div>
+    <div class="stage-photo">
+      <img src="assets/DSC05023.jpg" alt="The stage at Rumours Lounge">
     </div>
   </div>
 </section>
