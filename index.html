@@ -151,7 +151,8 @@
   .story-note{ margin-top:26px; font-size:0.95rem; color:var(--muted); max-width:60ch; }
 
   /* ===== WHAT'S ON TEASER (small banner) ===== */
-  .teaser{ text-align:center; }
+  .teaser{ text-align:center; border-top:6px solid var(--ink); }
+  .teaser .section-inner{ display:flex; flex-direction:column; align-items:center; }
   .teaser-kicker{ font-size:0.78rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--red); margin-bottom:14px; }
   .teaser-line{ font-size: clamp(1.3rem, 3vw, 2rem); font-weight:700; margin-bottom:30px; }
   .teaser-line span{ color:var(--red); }
@@ -248,16 +249,8 @@
       <div class="story-quote disp" style="font-family:'Inter',sans-serif; font-weight:800; text-transform:none;">
         This isn't a venue that <span>happens</span> to book live music. It's the room Joburg built for it.
       </div>
-      <p class="story-note">[Placeholder — swap for the real story from Fred: how long it's been running, who's played here, what makes it different. Keep it a punchy line or two, not a paragraph — the point of this layout is that the quote does the talking.]</p>
+      <p class="story-note">Rumours Lounge has been the room since 12 July 2006 — starting at Palm Court in Welties, then Cresta, Hillfox, Strydom Park, Westgate, and back to Strydom Park for good. Twenty years, five rooms, one crowd that kept following.</p>
     </div>
-  </div>
-</section>
-
-<section class="teaser">
-  <div class="section-inner">
-    <div class="teaser-kicker">This Week</div>
-    <div class="teaser-line">Jam Night <span>·</span> Untitled <span>·</span> Retro Reboot</div>
-    <a href="whats-on.html" class="hero-cta">See Full Lineup →</a>
   </div>
 </section>
 
@@ -277,7 +270,7 @@
   </div>
 </section>
 
-<section class="teaser" style="padding-top:0;">
+<section class="teaser">
   <div class="section-inner">
     <div class="teaser-kicker">Get In Touch</div>
     <div class="teaser-line">Got a show, a question, or just want to say hi?</div>
