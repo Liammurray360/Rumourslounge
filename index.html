@@ -41,14 +41,19 @@
   @media (max-width:780px){ .nav-links{ display:none; } }
 
   /* ===== HERO — massive cropped type is the whole point ===== */
-  .hero{
-    padding: 20px 0 0; overflow:hidden;
-    background-image:
-      linear-gradient(180deg, rgba(245,240,226,0.88) 0%, rgba(245,240,226,0.93) 100%),
-      url('assets/DSC03723.jpg');
-    background-size: cover;
-    background-position: center 60%;
+  .hero{ padding: 0; overflow:hidden; }
+  .hero-photo{
+    height: 46vh; min-height:320px; position:relative;
+    background-image: url('assets/DSC03723.jpg');
+    background-size: cover; background-position: center 55%;
+    display:flex; align-items:center; justify-content:center;
   }
+  .hero-photo::after{
+    content:""; position:absolute; inset:0;
+    background: linear-gradient(180deg, rgba(23,19,15,0) 60%, rgba(23,19,15,0.55) 100%);
+  }
+  .hero-photo img{ position:relative; z-index:1; height:90px; filter: drop-shadow(0 6px 20px rgba(0,0,0,0.5)); }
+  .hero-type-wrap{ padding-top: 40px; }
   .hero-type{
     font-size: clamp(5rem, 15vw, 13rem);
     line-height:0.82;
@@ -173,13 +178,18 @@
 </nav>
 
 <section class="hero">
-  <div class="hero-type disp">
-    THE ROOM STAYS.<br>
-    <span class="line2">WHAT'S ON CHANGES.</span>
+  <div class="hero-photo">
+    <img src="assets/RumoursLogo.png" alt="Rumours Lounge">
   </div>
-  <div class="hero-meta">
-    <p class="hero-sub">Jam sessions, karaoke specials, and live bands — Rumours Lounge is the stage Joburg keeps coming back to, whatever night you walk in.</p>
-    <a href="#week" class="hero-cta">See what's on this week ↓</a>
+  <div class="hero-type-wrap">
+    <div class="hero-type disp">
+      THE ROOM STAYS.<br>
+      <span class="line2">WHAT'S ON CHANGES.</span>
+    </div>
+    <div class="hero-meta">
+      <p class="hero-sub">Jam sessions, karaoke specials, and live bands — Rumours Lounge is the stage Joburg keeps coming back to, whatever night you walk in.</p>
+      <a href="#week" class="hero-cta">See what's on this week ↓</a>
+    </div>
   </div>
 </section>
 
