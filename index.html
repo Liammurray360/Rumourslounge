@@ -220,7 +220,7 @@
 
 <section class="hero">
   <div class="hero-photo">
-    <video class="hero-video" autoplay muted loop playsinline>
+    <video class="hero-video" autoplay muted loop playsinline webkit-playsinline poster="assets/DSC03724.jpg" preload="auto">
       <source src="assets/hero-reel.mp4" type="video/mp4">
     </video>
     <img src="assets/RumoursLogoCream.png" alt="Rumours Lounge">
@@ -295,5 +295,21 @@
   <div class="footer-bottom">Rumours Lounge Est. 2006, Johannesburg, Strydompark</div>
 </footer>
 
+<script>
+  // iOS Safari can be picky about autoplay even with the right attributes set.
+  // This reinforces muted + play() as a belt-and-suspenders fallback.
+  // If it still can't play (e.g. Low Power Mode, Auto-Play Videos set to Off),
+  // the poster image above simply stays visible instead of a blank box.
+  document.addEventListener('DOMContentLoaded', function(){
+    var v = document.querySelector('.hero-video');
+    if(v){
+      v.muted = true;
+      var playPromise = v.play();
+      if(playPromise !== undefined){
+        playPromise.catch(function(){ /* silently keep poster visible */ });
+      }
+    }
+  });
+</script>
 </body>
 </html>
