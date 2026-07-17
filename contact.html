@@ -76,6 +76,11 @@
   .contact-card:hover{ background:var(--red); color:var(--white); }
   .contact-label{ font-size:0.72rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; margin-bottom:10px; opacity:0.7; }
   .contact-value{ font-size:1.3rem; font-weight:700; }
+  .contact-value-link{ display:block; font-size:1.3rem; font-weight:700; color:inherit; text-decoration:none; }
+  .contact-value-secondary{ display:block; font-size:0.95rem; font-weight:600; color:var(--muted); text-decoration:none; margin-top:6px; }
+  .contact-card:hover .contact-value-secondary{ color:rgba(255,255,255,0.75); }
+  .contact-method{ font-size:0.72rem; color:var(--muted); margin-top:10px; letter-spacing:0.5px; }
+  .contact-card:hover .contact-method{ color:rgba(255,255,255,0.7); }
 
   .submit-band{
     background: var(--ink); color:var(--cream);
@@ -89,6 +94,11 @@
     padding:16px 30px; transition: background .15s;
   }
   .submit-cta:hover{ background:var(--cream); color:var(--ink); }
+
+  .hours-box{ margin-top:26px; border:3px solid var(--ink); }
+  .hours-row{ display:flex; justify-content:space-between; padding:18px 24px; border-bottom:2px solid var(--ink); font-size:0.95rem; }
+  .hours-row:last-child{ border-bottom:none; }
+  .hours-row b{ color:var(--red); }
 
   /* ===== FOOTER ===== */
   footer{ border-top:6px solid var(--ink); padding:60px 48px 30px; background:var(--red); color:var(--white); }
@@ -107,17 +117,16 @@
   <div class="brand"><img src="assets/RumoursLogoCream.png" alt="Rumours Lounge"></div>
   <div class="nav-right">
     <div class="nav-links">
+      <a href="index.html#find">About</a>
       <a href="whats-on.html">This Week</a>
       <a href="venue.html">The Venue</a>
       <a href="contact.html">Contact</a>
-      <a href="index.html#find">Find Us</a>
     </div>
-    <a href="https://wa.me/27616723985" class="nav-whatsapp">WhatsApp Us</a>
+    <a href="https://wa.me/27798257995" class="nav-whatsapp">Get In Touch</a>
   </div>
 </nav>
 
 <div class="page-intro">
-  <div class="page-kicker">Johannesburg</div>
   <div class="page-title disp">Contact</div>
   <p class="page-desc">Questions, bookings, or you've got a show that belongs on our stage — here's every way to reach us.</p>
 </div>
@@ -125,14 +134,18 @@
 <section>
   <div class="section-inner">
     <div class="contact-grid">
-      <a href="tel:+27616723985" class="contact-card">
-        <div class="contact-label">Give Us A Call</div>
-        <div class="contact-value">061 672 3985</div>
-      </a>
-      <a href="https://wa.me/27616723985" class="contact-card">
-        <div class="contact-label">WhatsApp Us</div>
-        <div class="contact-value">061 672 3985</div>
-      </a>
+      <div class="contact-card">
+        <div class="contact-label">Get In Touch</div>
+        <a href="tel:+27798257995" class="contact-value-link">079 825 7995</a>
+        <a href="tel:+27616723985" class="contact-value-secondary">061 672 3985</a>
+        <div class="contact-method">Tap to call</div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-label">Get In Touch</div>
+        <a href="https://wa.me/27798257995" class="contact-value-link">079 825 7995</a>
+        <a href="https://wa.me/27616723985" class="contact-value-secondary">061 672 3985</a>
+        <div class="contact-method">Tap to WhatsApp</div>
+      </div>
       <a href="mailto:rumoursloungeza@gmail.com" class="contact-card">
         <div class="contact-label">Email Us</div>
         <div class="contact-value">rumoursloungeza@gmail.com</div>
@@ -142,7 +155,7 @@
     <div class="submit-band">
       <div>
         <div class="submit-title">Got A Show?</div>
-        <p class="submit-sub">Touring act, DJ night, or something else entirely — if you think it belongs at Rumours, hit us up.</p>
+        <p class="submit-sub">Wanna jam, host, play or hang? Hit us up.</p>
       </div>
       <a href="mailto:rumoursloungeza@gmail.com?subject=Event%20Submission" class="submit-cta">Submit Your Event →</a>
     </div>
@@ -153,20 +166,20 @@
   <div class="footer-grid">
     <div>
       <div class="footer-title">Rumours Lounge</div>
-      <p class="footer-text">The room stays. What's on changes.<br>Johannesburg, South Africa.</p>
-    </div>
-    <div>
-      <div class="footer-title">Hours</div>
-      <p class="footer-text">Wed — Jam Night, 7pm<br>Fri &amp; Sat — Live Bands, 7pm</p>
+      <p class="footer-text">The room stays. What's on changes.</p>
     </div>
     <div class="footer-links">
       <div class="footer-title">Follow</div>
-      <a href="#">Instagram</a>
-      <a href="#">Facebook</a>
-      <a href="contact.html">Contact</a>
+      <a href="https://www.instagram.com/rumoursloungejhb/" target="_blank" rel="noopener">Instagram (@rumoursloungejhb)</a>
+      <a href="https://www.facebook.com/Rumours.Lounge.Bar/" target="_blank" rel="noopener">Facebook (Rumours Rock City)</a>
+    </div>
+    <div class="footer-links">
+      <div class="footer-title">Contact</div>
+      <a href="tel:+27798257995">079 825 7995</a>
+      <a href="tel:+27616723985">061 672 3985</a>
     </div>
   </div>
-  <div class="footer-bottom">Rumours Lounge · Johannesburg</div>
+  <div class="footer-bottom">Rumours Lounge Est. 2006 — Johannesburg, Strydompark</div>
 </footer>
 
 </body>
