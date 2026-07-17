@@ -26,14 +26,38 @@
   /* ===== NAV ===== */
   nav{
     display:flex; align-items:center; justify-content:space-between;
-    padding: 24px 48px;
+    padding: 16px 48px;
+    background: var(--ink);
+    border-bottom: 4px solid var(--red);
+    position: sticky; top:0; z-index:100;
   }
   .brand{ display:flex; align-items:center; gap:10px; }
-  .brand img{ height:30px; display:block; }
-  .nav-links{ display:flex; gap:34px; font-size:0.82rem; font-weight:600; }
-  .nav-links a{ text-decoration:none; }
-  .nav-links a:hover{ color: var(--red); }
+  .brand img{ height:34px; display:block; }
+  .nav-links{ display:flex; gap:32px; font-size:0.75rem; font-weight:700; }
+  .nav-links a{
+    text-decoration:none; color: rgba(245,240,226,0.75);
+    text-transform:uppercase; letter-spacing:1px;
+    position:relative; padding-bottom:5px; transition: color .15s;
+  }
+  .nav-links a::after{
+    content:''; position:absolute; left:0; bottom:0; width:0; height:2px;
+    background: var(--red); transition: width .2s;
+  }
+  .nav-links a:hover{ color: var(--cream); }
+  .nav-links a:hover::after{ width:100%; }
   @media (max-width:780px){ .nav-links{ display:none; } }
+  .nav-right{ display:flex; align-items:center; gap:24px; }
+  .nav-whatsapp{
+    background:var(--red); color:var(--white); text-decoration:none;
+    font-size:0.75rem; font-weight:700; letter-spacing:0.5px; padding:9px 18px; border-radius:999px; white-space:nowrap;
+    transition: background .15s;
+    animation: navPulse 2.6s infinite;
+  }
+  .nav-whatsapp:hover{ background:var(--white); color:var(--ink); animation:none; }
+  @keyframes navPulse{
+    0%,100%{ box-shadow: 0 0 0 0 rgba(236,28,29,0.55); }
+    50%{ box-shadow: 0 0 0 7px rgba(236,28,29,0); }
+  }
 
   /* ===== PAGE INTRO ===== */
   .page-intro{ padding: 70px 48px 20px; }
@@ -85,11 +109,15 @@
 <body>
 
 <nav>
-  <div class="brand"><img src="assets/RumoursLogoRedClean.png" alt="Rumours Lounge"></div>
-  <div class="nav-links">
-    <a href="whats-on.html">This Week</a>
-    <a href="venue.html">The Venue</a>
-    <a href="index.html#find">Find Us</a>
+  <div class="brand"><img src="assets/RumoursLogoCream.png" alt="Rumours Lounge"></div>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a href="whats-on.html">This Week</a>
+      <a href="venue.html">The Venue</a>
+      <a href="contact.html">Contact</a>
+      <a href="index.html#find">Find Us</a>
+    </div>
+    <a href="https://wa.me/27616723985" class="nav-whatsapp">WhatsApp Us</a>
   </div>
 </nav>
 
