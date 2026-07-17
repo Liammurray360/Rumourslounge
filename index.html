@@ -44,9 +44,13 @@
   .hero{ padding: 0; overflow:hidden; }
   .hero-photo{
     height: 52vh; min-height:380px; position:relative;
-    background-image: url('assets/DSC03724.jpg');
-    background-size: cover; background-position: center 55%;
     display:flex; align-items:center; justify-content:center;
+    overflow:hidden;
+    background: var(--ink);
+  }
+  .hero-video{
+    position:absolute; inset:0; width:100%; height:100%;
+    object-fit:cover; object-position:center 55%;
   }
   .hero-photo::after{
     content:""; position:absolute; inset:0;
@@ -191,6 +195,9 @@
 
 <section class="hero">
   <div class="hero-photo">
+    <video class="hero-video" autoplay muted loop playsinline poster="assets/DSC03724.jpg">
+      <source src="assets/hero-reel.mp4" type="video/mp4">
+    </video>
     <img src="assets/RumoursLogoCream.png" alt="Rumours Lounge">
   </div>
   <div class="hero-type-wrap">
