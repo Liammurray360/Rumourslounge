@@ -44,7 +44,7 @@
   .hero{ padding: 0; overflow:hidden; }
   .hero-photo{
     height: 52vh; min-height:380px; position:relative;
-    background-image: url('assets/DSC03723.jpg');
+    background-image: url('assets/DSC03724.jpg');
     background-size: cover; background-position: center 55%;
     display:flex; align-items:center; justify-content:center;
   }
@@ -97,6 +97,11 @@
   .on-red .section-title{ color: var(--white); text-shadow: -2px 0 0 rgba(23,19,15,0.28); }
 
   /* ===== OUR STORY — huge pull quote instead of a paragraph block ===== */
+  .story-grid{ display:grid; grid-template-columns: 1fr 1.3fr; gap:56px; align-items:center; }
+  @media (max-width:860px){ .story-grid{ grid-template-columns:1fr; gap:30px; } }
+  .story-photo{ border-radius:10px; overflow:hidden; }
+  .story-photo img{ width:100%; display:block; }
+  .story-caption{ font-size:0.78rem; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:var(--muted); margin-top:12px; }
   .story-quote{
     font-size: clamp(1.6rem, 3.2vw, 2.6rem); line-height:1.3; max-width:900px;
   }
@@ -167,8 +172,7 @@
 
 <nav>
   <div class="brand">
-    <img src="assets/RumoursLogo.png" alt="Rumours Lounge">
-    <div class="logo-text">RUMOURS LOUNGE</div>
+    <img src="assets/RumoursLogoRedClean.png" alt="Rumours Lounge">
   </div>
   <div class="nav-links">
     <a href="#week">This Week</a>
@@ -179,7 +183,7 @@
 
 <section class="hero">
   <div class="hero-photo">
-    <img src="assets/RumoursLogo.png" alt="Rumours Lounge">
+    <img src="assets/RumoursLogoCream.png" alt="Rumours Lounge">
   </div>
   <div class="hero-type-wrap">
     <div class="hero-type disp">
@@ -203,12 +207,19 @@
 </div>
 
 <section id="story">
-  <div class="section-inner">
-    <div class="story-quote disp" style="font-family:'Inter',sans-serif; font-weight:800; text-transform:none;">
-      This isn't a venue that <span>happens</span> to book live music. It's the room Joburg built for it.
+  <div class="section-inner story-grid">
+    <div>
+      <div class="story-photo"><img src="assets/DSC03717.jpg" alt="Fred Otto, owner of Rumours Lounge"></div>
+      <div class="story-caption">Fred Otto — Owner</div>
     </div>
-    <p class="story-note">[Placeholder — swap for the real story: how long it's been running, who's played here, what makes it different. Keep it a punchy line or two, not a paragraph — the point of this layout is that the quote does the talking.]</p>
+    <div>
+      <div class="story-quote disp" style="font-family:'Inter',sans-serif; font-weight:800; text-transform:none;">
+        This isn't a venue that <span>happens</span> to book live music. It's the room Joburg built for it.
+      </div>
+      <p class="story-note">[Placeholder — swap for the real story from Fred: how long it's been running, who's played here, what makes it different. Keep it a punchy line or two, not a paragraph — the point of this layout is that the quote does the talking.]</p>
+    </div>
   </div>
+</section>
 </section>
 
 <section id="room" class="on-red">
@@ -218,10 +229,10 @@
       <div class="section-title disp">Our Vibe</div>
     </div>
     <div class="vibe-grid">
-      <div class="vibe-photo"><img src="assets/DSC03723.jpg" alt="Stage with truss lighting"></div>
       <div class="vibe-photo"><img src="assets/DSC03725.jpg" alt="Drum kit under stage lights"></div>
-      <div class="vibe-photo"><img src="assets/DSC03731.jpg" alt="Drum kit close up"></div>
       <div class="vibe-photo"><img src="assets/DSC03732.jpg" alt="Microphone in stage lighting"></div>
+      <div class="vibe-photo"><img src="assets/DSC03731.jpg" alt="Drum kit close up"></div>
+      <div class="vibe-photo"><img src="assets/DSC03730.jpg" alt="Full room view with Rock City sign"></div>
     </div>
   </div>
 </section>
